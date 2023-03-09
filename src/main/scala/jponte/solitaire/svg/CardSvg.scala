@@ -28,7 +28,7 @@ object CardSvg {
       case SuitColor.Black => "#000000"
     svg(
       Attribute("version", "1.1"),
-      _class := "w-20 h-28 lg:w-24 lg:h-36",
+      _class := "w-24 h-32",
       xmlns  := "http://www.w3.org/2000/svg"
     )(
       rect(
@@ -44,16 +44,16 @@ object CardSvg {
         stroke := "#333"
       ),
       textTag(
-        x := "14%",
-        y := "14%",
+        x := "1em",
+        y := "1.2em",
         Attribute("font-size", "16"),
         Attribute("text-anchor", "middle"),
         Attribute("alignment-baseline", "central"),
         fill := colorHex
       )(card.number.show),
       textTag(
-        x := "28%",
-        y := "14%",
+        x := "1.9em",
+        y := "1.2em",
         Attribute("font-size", "16"),
         Attribute("text-anchor", "middle"),
         Attribute("alignment-baseline", "central"),
@@ -84,7 +84,7 @@ object CardSvg {
   def blankCardSvg: Html[Msg] =
     svg(
       Attribute("version", "1.1"),
-      _class := "w-20 h-28 lg:w-24 lg:h-36",
+      _class := "w-24 h-32",
       xmlns  := "http://www.w3.org/2000/svg"
     )(
       rect(
@@ -104,7 +104,7 @@ object CardSvg {
   def cardPlaceholderSvg: Html[Msg] =
     svg(
       Attribute("version", "1.1"),
-      _class := "w-20 h-28 lg:w-24 lg:h-36",
+      _class := "w-24 h-32",
       xmlns  := "http://www.w3.org/2000/svg"
     )(
       rect(
