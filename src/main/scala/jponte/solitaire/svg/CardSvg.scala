@@ -28,41 +28,43 @@ object CardSvg {
       case SuitColor.Black => "#000000"
     svg(
       Attribute("version", "1.1"),
-      width  := "52",
-      height := "72",
+      _class := "w-20 h-28 lg:w-24 lg:h-36",
       xmlns  := "http://www.w3.org/2000/svg"
     )(
       rect(
-        x      := "1",
-        y      := "1",
-        width  := "50",
-        height := "70",
+        x      := "2%",
+        y      := "2%",
+        width  := "96%",
+        height := "96%",
         Attribute("stroke-width", "1"),
-        rx := "4",
-        ry := "4",
+        rx := "4%",
+        ry := "4%",
         Attribute("stroke-linejoin", "round"),
         fill   := "#ffffff",
         stroke := "#333"
       ),
       textTag(
-        x := "8",
-        y := "16",
+        x := "14%",
+        y := "14%",
         Attribute("font-size", "16"),
         Attribute("text-anchor", "middle"),
+        Attribute("alignment-baseline", "central"),
         fill := colorHex
       )(card.number.show),
       textTag(
-        x := "20",
-        y := "16",
+        x := "28%",
+        y := "14%",
         Attribute("font-size", "16"),
         Attribute("text-anchor", "middle"),
+        Attribute("alignment-baseline", "central"),
         fill := colorHex
       )(card.suit.show),
       textTag(
-        x := "26",
-        y := "60",
+        x := "50%",
+        y := "50%",
         Attribute("font-size", "48"),
         Attribute("text-anchor", "middle"),
+        Attribute("alignment-baseline", "central"),
         fill := colorHex
       )(card.number.show)
     )
@@ -82,18 +84,17 @@ object CardSvg {
   def blankCardSvg: Html[Msg] =
     svg(
       Attribute("version", "1.1"),
-      width  := "52",
-      height := "72",
+      _class := "w-20 h-28 lg:w-24 lg:h-36",
       xmlns  := "http://www.w3.org/2000/svg"
     )(
       rect(
-        x      := "1",
-        y      := "1",
-        width  := "50",
-        height := "70",
+        x      := "2%",
+        y      := "2%",
+        width  := "96%",
+        height := "96%",
         Attribute("stroke-width", "1"),
-        rx := "4",
-        ry := "4",
+        rx := "4%",
+        ry := "4%",
         Attribute("stroke-linejoin", "round"),
         fill   := "#eee",
         stroke := "#333"
@@ -103,18 +104,17 @@ object CardSvg {
   def cardPlaceholderSvg: Html[Msg] =
     svg(
       Attribute("version", "1.1"),
-      width  := "52",
-      height := "72",
+      _class := "w-20 h-28 lg:w-24 lg:h-36",
       xmlns  := "http://www.w3.org/2000/svg"
     )(
       rect(
-        x      := "1",
-        y      := "1",
-        width  := "50",
-        height := "70",
+        x      := "2%",
+        y      := "2%",
+        width  := "96%",
+        height := "96%",
         Attribute("stroke-width", "1"),
-        rx := "4",
-        ry := "4",
+        rx := "4%",
+        ry := "4%",
         Attribute("stroke-linejoin", "round"),
         fill   := "transparent",
         stroke := "#333",
